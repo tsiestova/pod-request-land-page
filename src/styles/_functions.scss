@@ -1,0 +1,20 @@
+@mixin breakpoint($name) {
+  @if $name == tablet {
+    @media (min-width: 601px) {
+      @content;
+    }
+  } @else if $name == desktop {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+}
+
+:root {
+  --color1: #121725;
+  --color2: #ffffff;
+  --color3: #2c344b;
+  --color4: #5a668a;
+  --color5: #c2cbe5;
+  --color6: #54e6af;
+}
