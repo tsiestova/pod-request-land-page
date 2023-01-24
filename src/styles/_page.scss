@@ -145,29 +145,6 @@
     height: auto;
   }
 
-  //&.services__item-spotify {
-  //  @include breakpoint(tablet) {
-  //    width: 96px;
-  //  }
-  //}
-  //
-  //&.services__item-apple {
-  //  @include breakpoint(tablet) {
-  //    width: 78px;
-  //  }
-  //}
-  //&.services__item-google {
-  //  @include breakpoint(tablet) {
-  //    width: 125px;
-  //  }
-  //}
-  //
-  //&.services__item-pocket {
-  //  @include breakpoint(tablet) {
-  //    width: 129px;
-  //  }
-  //}
-
   img {
     width: 100%;
     height: 100%;
@@ -175,17 +152,23 @@
   }
 }
 
-.form {
+.form__wrap {
   @include breakpoint(tablet) {
     background: var(--color3);
     border-radius: 28px;
-    text-align: right;
-    max-width: 427px;
-    order: 3;
-    margin-bottom: 64px;
     height: 55px;
     padding: 5px;
     display: flex;
+    margin-bottom: 8px;
+  }
+}
+
+.form {
+  @include breakpoint(tablet) {
+    text-align: left;
+    max-width: 427px;
+    order: 3;
+    margin-bottom: 64px;
   }
 }
 
@@ -200,10 +183,17 @@
   border-radius: 28px;
   padding: 9px 32px;
   font-family: inherit;
+  z-index: 1;
+  margin-bottom: 8px;
 
   @include breakpoint(tablet) {
     max-width: 162px;
     padding: 9px 27px;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }
 
@@ -215,10 +205,11 @@
   border: none;
   font-size: 14px;
   line-height: 28px;
-  color: var(--color1);
   margin-bottom: 16px;
-  opacity: 0.5;
   font-family: inherit;
+  z-index: 1;
+  outline: none;
+  color: var(--color2);
 
   @include breakpoint(tablet) {
     width: 100%;
@@ -229,17 +220,28 @@
   &::-webkit-input-placeholder {
     /* WebKit browsers */
     color: var(--color2);
+    opacity: 0.5;
   }
   &:-moz-placeholder {
     /* Mozilla Firefox 4 to 18 */
     color: var(--color2);
+    opacity: 0.5;
   }
   &::-moz-placeholder {
     /* Mozilla Firefox 19+ */
     color: var(--color2);
+    opacity: 0.5;
   }
   &:-ms-input-placeholder {
     /* Internet Explorer 10+ */
     color: var(--color2);
+    opacity: 0.5;
   }
+}
+
+.form__message {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--color7);
 }

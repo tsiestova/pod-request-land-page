@@ -52,14 +52,19 @@
               <img src="./assets/desktop/pocket-casts.svg" alt="" />
             </li>
           </ul>
-          <form action="#" class="form">
-            <input
-              type="email"
-              name=""
-              class="user-email"
-              placeholder="Email address"
-            />
-            <button class="btn__request" type="submit">Request Access</button>
+          <form action="#" class="form" id="form">
+            <div class="form__wrap">
+              <input
+                type="email"
+                name="user-email"
+                class="user-email"
+                placeholder="Email address"
+                id="email"
+              />
+              />
+              <button class="btn__request" type="submit">Request Access</button>
+            </div>
+            <span class="form__message"></span>
           </form>
         </div>
       </div>
