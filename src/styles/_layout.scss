@@ -1,0 +1,52 @@
+body {
+  font-family: "Chivo", sans-serif;
+
+  &:before {
+    content: "";
+    background: rgba(#121725, 0.9);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include breakpoint(tablet) {
+      background: #121725;
+    }
+  }
+
+  &:after {
+    content: "";
+    background: url("./assets/mobile/image-host.jpg") no-repeat top center;
+    background-size: cover;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -2;
+
+    @include breakpoint(tablet) {
+      background: url("./assets/tablet/image-host.jpg") no-repeat top right;
+      z-index: -1;
+    }
+
+    @include breakpoint(desktop) {
+      background: url("./assets/desktop/image-host.jpg") no-repeat top 130px
+        right;
+    }
+  }
+}
+
+.layout {
+  padding: 0 24px;
+
+  @include breakpoint(tablet) {
+    padding: 0 39px;
+  }
+
+  @include breakpoint(desktop) {
+    padding: 0;
+  }
+}

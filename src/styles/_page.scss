@@ -1,0 +1,245 @@
+.card-wrap {
+  &:after {
+    @include breakpoint(tablet) {
+      content: "";
+      background: url(./assets/desktop/bg-pattern-dots.svg) no-repeat left
+        bottom;
+      position: absolute;
+      bottom: 0px;
+      left: 30px;
+      right: 0;
+      top: 0;
+    }
+
+    @include breakpoint(desktop) {
+      background: url(./assets/desktop/bg-pattern-dots.svg) no-repeat right
+        bottom;
+      bottom: 201px;
+    }
+  }
+  @include breakpoint(desktop) {
+    max-width: 1113px;
+    margin: auto;
+  }
+}
+
+.header {
+  height: 176px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(tablet) {
+    padding-top: 50px;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 83px;
+  }
+
+  @include breakpoint(desktop) {
+    padding-top: 0;
+    height: 256px;
+    align-items: center;
+    margin-bottom: 0;
+  }
+}
+
+.logo__wrap {
+  width: 135px;
+  height: 56px;
+}
+
+.card {
+  position: relative;
+  padding-bottom: 94px;
+
+  @include breakpoint(tablet) {
+    max-width: 88%;
+    background-color: var(--color1);
+    padding-top: 93px;
+
+    .layout {
+      position: relative;
+
+      @include breakpoint(tablet) {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 725px;
+  }
+}
+
+.card__heading {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 38px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--color2);
+  margin-bottom: 14px;
+
+  span {
+    color: var(--color6);
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 48px;
+    line-height: 56px;
+    text-align: left;
+    text-transform: uppercase;
+    margin-bottom: 31px;
+    order: 1;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 52px;
+    line-height: 62px;
+    margin-bottom: 24px;
+  }
+}
+
+.card__description {
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 25px;
+  text-align: center;
+  color: var(--color5);
+  margin-bottom: 35px;
+
+  @include breakpoint(tablet) {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+    max-width: 75%;
+    order: 2;
+    margin-bottom: 40px;
+  }
+
+  @include breakpoint(desktop) {
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 445px;
+  }
+}
+
+.services__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 50px;
+
+  @include breakpoint(tablet) {
+    order: 4;
+    max-width: 536px;
+  }
+}
+
+.services__item {
+  height: 15px;
+
+  @include breakpoint(tablet) {
+    height: auto;
+  }
+
+  //&.services__item-spotify {
+  //  @include breakpoint(tablet) {
+  //    width: 96px;
+  //  }
+  //}
+  //
+  //&.services__item-apple {
+  //  @include breakpoint(tablet) {
+  //    width: 78px;
+  //  }
+  //}
+  //&.services__item-google {
+  //  @include breakpoint(tablet) {
+  //    width: 125px;
+  //  }
+  //}
+  //
+  //&.services__item-pocket {
+  //  @include breakpoint(tablet) {
+  //    width: 129px;
+  //  }
+  //}
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.form {
+  @include breakpoint(tablet) {
+    background: var(--color3);
+    border-radius: 28px;
+    text-align: right;
+    max-width: 427px;
+    order: 3;
+    margin-bottom: 64px;
+    height: 55px;
+    padding: 5px;
+    display: flex;
+  }
+}
+
+.btn__request {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--color1);
+  width: 100%;
+  background: var(--color6);
+  box-shadow: 0 25px 20px -20px rgba(84, 230, 175, 0.497913);
+  border-radius: 28px;
+  padding: 9px 32px;
+  font-family: inherit;
+
+  @include breakpoint(tablet) {
+    max-width: 162px;
+    padding: 9px 27px;
+  }
+}
+
+.user-email {
+  background: var(--color3);
+  border-radius: 28px;
+  width: 100%;
+  padding: 9px 32px;
+  border: none;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--color1);
+  margin-bottom: 16px;
+  opacity: 0.5;
+  font-family: inherit;
+
+  @include breakpoint(tablet) {
+    width: 100%;
+    height: 100%;
+    padding: 5px 27px;
+  }
+
+  &::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: var(--color2);
+  }
+  &:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: var(--color2);
+  }
+  &::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: var(--color2);
+  }
+  &:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: var(--color2);
+  }
+}
