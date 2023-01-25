@@ -195,6 +195,10 @@
   &:hover {
     cursor: pointer;
   }
+
+  &:disabled {
+    opacity: 0.4;
+  }
 }
 
 .user-email {
