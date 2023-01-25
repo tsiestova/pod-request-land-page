@@ -24,16 +24,19 @@ class App {
   }
 
   handleBlur(e) {
+    console.log("Blur");
     const value = e.target.value;
     const validation = this.isValidEmail(value);
 
     if (!validation) {
+      this.emailInput.focus();
       this.textContainer.textContent = "Oops! Please add your email";
       this.button.disabled = true;
     }
   }
 
   handleFocus() {
+    console.log("Focus");
     this.textContainer.textContent = "";
     this.button.disabled = false;
   }
@@ -44,7 +47,9 @@ class App {
     if (e.key === "Enter" && !validation) {
       this.textContainer.textContent = "Oops! Please add your email";
       this.button.disabled = true;
-      this.emailInput.blur();
+    } else {
+      this.textContainer.textContent = "";
+      this.button.disabled = false;
     }
   }
 
@@ -53,7 +58,6 @@ class App {
     const form = e.target;
     const userEmail = form["user-email"].value;
     const validation = this.isValidEmail(userEmail);
-    console.log(userEmail);
 
     if (!validation) {
       return;
